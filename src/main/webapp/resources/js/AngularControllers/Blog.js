@@ -1,7 +1,7 @@
 app.controller('BlogController', [ '$scope', '$http', function($scope, $http) {
 	
 	$scope.submit = function() {
-		var BASE_URL = 'http://localhost:8082/Collaboration/';
+		var BASE_URL = 'http://localhost:8082/Collaboration';
 		$scope.blog = {	
 			bid       : $scope.blogid,
 			blogName : $scope.blogName,

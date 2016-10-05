@@ -7,11 +7,11 @@
 		<form role="form" data-ng-submit="submit()"
 			data-ng-controller="ForumController">
 			<h3 align="center">Create Forum</h3>
-			<div class="form-group">
+			<!-- <div class="form-group">
 				<input type="text" class="form-control input-sm"
 					placeholder="Forum Id" data-ng-model="forumid"
 					data-ng-show="forumid" data-ng-disabled="forumid">
-			</div>
+			</div> -->
 			<div class="form-group">
 				<input type="text" class="form-control input-sm"
 					placeholder="Forum Title" data-ng-model="forumName">
@@ -43,11 +43,11 @@
 				<tr data-ng-repeat="forum in forums">
 					<td width="15%">{{forum.forumName}}</td>
 					<td width="70%">{{forum.forumDesc}}</td>
-					<td width="20%">
+					<td width="70%">
 						<div class="btn-group  btn-group-justified ">
 							<sec:authorize access="isAuthenticated()">
 								<a class="btn btn-primary btn-xs"
-									data-ng-click="deleteForum(forum.fid)">Delect</a>
+									data-ng-click="deleteForum(forum.fid)">Delete</a>
 
 								<a class="btn btn-primary btn-xs"
 									data-ng-click="editForum(forum.fid)">Edit</a>

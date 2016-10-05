@@ -1,7 +1,7 @@
 app.controller('RegController', [ '$scope', '$http', function($scope, $http) {
 
 	$scope.submit = function() {
-		var BASE_URL = 'http://localhost:8082/Collaboration/';
+		var BASE_URL = 'http://localhost:8082/Collaboration';
 		$scope.users = {
 			name : $scope.name,
 			username : $scope.username,

@@ -3,7 +3,7 @@ app.controller('IndividualForum', [ '$scope', '$http', function($scope, $http) {
 	    $scope.commentDesc = '';
 	    $scope.c_fid=document.getElementById("fid").value;
 	    $scope.Comment = function() {
-			var BASE_URL = 'http://localhost:8082/Collaboration/';
+			var BASE_URL = 'http://localhost:8082/Collaboration';
 			$scope.comment = {	
 				c_fid : $scope.c_fid,
 				commentDesc : $scope.commentDesc,

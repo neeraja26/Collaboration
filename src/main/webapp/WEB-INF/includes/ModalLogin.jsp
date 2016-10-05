@@ -22,9 +22,15 @@
 					<!-- <h4>Login</h4> -->
 				</div>
 <!-- 				<div class="modal-body" style="padding: 35px 35px;"> -->
-					<form action="${pageContext.request.contextPath}/perform_login" method="post">
+					<form action="perform_login" method="post">
 						<div class="form-group form-group-sm">
-
+  
+                <sec:authorize access="isAuthenticated()">
+						<li><a style="color: white">Hello <b><sec:authentication
+										property="principal.username" /></b></a></li>
+						<li><a href="${pageContext.request.contextPath}/perform_logout"><span
+								class="glyphicon glyphicon-log-out"></span></a></li>
+					</sec:authorize>  
 							<!-- <div class="input-group">
 								<div class="input-group-addon">
 									<i class="glyphicon glyphicon-user"></i>
@@ -54,8 +60,8 @@
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
+	
+
 <!-- <div class="loginform-open">
   <a href=""><i class="fa fa-list-alt fa-lg"></i> Login Form</a>
 </div>

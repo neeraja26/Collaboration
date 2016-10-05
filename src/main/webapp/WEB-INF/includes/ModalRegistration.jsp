@@ -7,7 +7,7 @@
 }
 </style>
  <head> <link href="resources/css/index.css" rel="stylesheet">
-
+<script src="${pageContext.request.contextPath}/resources/js/AngularControllers/App.js"></script>
     
  </head>
 <div class="container">
@@ -20,7 +20,7 @@
 			<div class="modal-content">
 				<!-- <div class="modal-header" style="padding: 15px 50px;"> -->
 					<!-- <h4>Registration</h4>
-				</div> -->
+				 --></div>
 				<!-- <div class="modal-body" style="padding: 30px 50px;"> -->
 					<form role="form" data-ng-submit="submit()"
 						data-ng-controller="RegController" method="post">
@@ -45,11 +45,13 @@
 								<input type="password" class="form-control"
 									placeholder="Password" data-ng-model="password">
 							</div> -->
-							<a href="" class="form-close bounce"><i class="fa fa-times fa-lg"></i></a>
+							<!-- <a href="" class="form-close bounce"><i class="fa fa-times fa-lg"></i></a> -->
     <label for="name">UserName:</label>
-    <input type="text" class="form-control" placeholder="Enter Username" id="username" name="username"/>
+    <input type="text" class="form-control" placeholder="Username"
+									data-ng-model="username"/>
     <label for="password">Password:</label>
-    <input type="password" class="form-control" placeholder="Enter Password" id="password" name="password"/>
+   <input type="password" class="form-control" placeholder="Password"
+									data-ng-model="password"/>
 							
 							 <label for="name">Confirm Password:</label>
 								<input type="password" class="form-control"
@@ -67,7 +69,7 @@
 							<div class="input-group">
 								<label class="radio-inline"> <input type="radio"
 									name="optradio" value="Male" data-ng-model="gender">Male
-								</label> <label class="radio-inline"> <input type="radio"
+								</label> <br> <label class="radio-inline"> <input type="radio"
 									value="Female" name="optradio" data-ng-model="gender">Female
 								</label>
 							</div>
